@@ -1,40 +1,107 @@
 import React, { useState } from "react";
 import { Generator } from "../pages/api/generators";
 
-export const GeneratorComponent: React.FC<{ generator: Generator }> = ({
-    generator: gen,
-}) => {
-    const [showMore, setSM] = useState(false);
-    const [showMoreDescription, setSMD] = useState(false);
+export const GeneratorComponent: React.FC<{
+    generator: Generator;
+    focused: boolean;
+    setFocused: (value: string) => any;
+    currentFocus: string;
+}> = ({ generator: gen, focused, setFocused, currentFocus }) => {
+    const focusable = currentFocus === "";
     return (
         <div
             className="generator"
-            style={showMoreDescription ? { height: "500px" } : {}}
+            style={
+                focused
+                    ? {
+                          position: "absolute",
+                          width: "750px",
+                          height: "500px",
+                          top: 0,
+                          bottom: 0,
+                          left: 0,
+                          right: 0,
+                          margin: "auto",
+                          fontSize: "32px",
+                      }
+                    : { cursor: focusable ? "pointer" : "auto" }
+            }
+            onClick={() => currentFocus === "" && setFocused(gen.name)}
             key={gen.name}
         >
-            <h1>{gen.name}</h1>
-            {gen.description && (
+            {focused && (
                 <span
                     style={{
+                        position: "absolute",
+                        top: -1,
+                        left: "96.5%",
+                        color: "red",
+                        background: "none",
+                        border: "none",
+                        fontSize: "28px",
                         cursor: "pointer",
-                        color: "gray",
-                        fontStyle: "italic",
-                        marginBottom: 0,
-                        paddingBottom: 0,
                     }}
-                    onClick={() => setSM(!showMore)}
+                    onClick={() => setFocused("")}
                 >
-                    show {showMore ? "less" : "more"}
+                    X
                 </span>
             )}
-            {showMore && (
+            <h1>{gen.name}</h1>
+            {focused && (
                 <div
                     style={{
-                        maxWidth: "225px",
-                        overflowY: "hidden",
+                        display: "flex",
+                        flex: 1,
+                        justifyContent: "center",
+                        alignItems: "center",
+                        textAlign: "center",
+                        flexDirection: "column",
                     }}
                 >
-                    <p>{gen.description}</p>
+                    <div
+                        style={{
+                            maxWidth: "90%",
+                            width: "100%",
+                            overflowY: "hidden",
+                            fontSize: "32px",
+                            padding: 0,
+                            marginBottom: 0,
+                        }}
+                    >
+                        <p>{gen.description}</p>
+                    </div>
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            flex: 1,
+                            justifyContent: "center",
+                            alignItems: "center",
+                            textAlign: "center",
+                        }}
+                    >
+                        <a
+                            style={{
+                                color: "white",
+                                textDecoration: "none",
+                                padding: 0,
+                                marginBottom: "20px",
+                            }}
+                            href={gen.source}
+                        >
+                            Source code
+                        </a>
+                        <a
+                            style={{
+                                color: "white",
+                                textDecoration: "none",
+                                padding: 0,
+                            }}
+                            href={gen.url}
+                        >
+                            Download it
+                        </a>
+                    </div>
                 </div>
             )}
         </div>
