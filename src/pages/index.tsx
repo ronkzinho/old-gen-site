@@ -25,6 +25,7 @@ export default function Home() {
                 <div className="generators">
                     {generators.map((gen) => (
                         <GeneratorComponent
+                            key={gen.name}
                             generator={gen}
                             focused={focused === gen.name}
                             setFocused={setFocused}
