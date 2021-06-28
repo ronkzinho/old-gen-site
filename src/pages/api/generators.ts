@@ -15,9 +15,7 @@ export const generators: Generator[] = [
     new Generator(
         "fsg-power-village-plusplus",
         "https://drive.google.com/uc?export=download&id=1vcJPJhuT11jfJreKElmQL7PdfJIZ3Lv2",
-        "Contains village and ruined portal on ++ direction of spawn, ruined portal chest contains " +
-            "at least 3 iron and a light for the portal with bastion on ++ and fortress either -+ or +- " +
-            "quadrant with 150 150 blind in fortress quadrant with ocean stronghold."
+        "village, ruined portals with good loot, classic FSG nether, blind travel to deep ocean stronghold"
     ),
     new Generator(
         "filteredseed",
@@ -43,6 +41,16 @@ export const generators: Generator[] = [
         "fsg-power-ship",
         "https://drive.google.com/uc?export=download&id=1xmTpoow6ODuhGo6NwqZwdoW_jI09uPwo",
         "Shipwrecks, magma ravines, ruined portals with good loot, classic FSG nether, blind travel to ocean stronghold"
+    ),
+    new Generator(
+        "ruined-portal-loot",
+        "https://drive.google.com/uc?export=download&id=1K_YdBUfr2ANdLVfTABV-CE_MIb4k3_Xv",
+        "Coinflip shipwreck/village with ruined portal loot having a fitness function (typically 3 iron and a lighter), blind travel from either -150,150 or 150,-150"
+    ),
+    new Generator(
+        "fsg-power-village",
+        "https://drive.google.com/uc?export=download&id=1WfqcGt2vzeQANJGJefCRkYkBhfgK8vHW",
+        "village, ruined portals with good loot, classic FSG nether, blind travel to stronghold"
     ),
 ];
 
