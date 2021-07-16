@@ -31,8 +31,8 @@ export default function Home() {
                     to help for those who want to run old FSG generators locally
                 </p>
                 <p>
-                    If you don't have the macro/consumer of this api, you can
-                    download it{" "}
+                    If you don{"'"}t have the macro/consumer of this api, you
+                    can download it{" "}
                     <a href="https://github.com/ronkzinho/oldgenoptimizer/releases/latest/download/optimizer.zip">
                         here
                     </a>
