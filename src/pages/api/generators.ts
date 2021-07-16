@@ -52,6 +52,11 @@ export const generators: Generator[] = [
         "https://drive.google.com/uc?export=download&id=1WfqcGt2vzeQANJGJefCRkYkBhfgK8vHW",
         "village, ruined portals with good loot, classic FSG nether, blind travel to stronghold"
     ),
+    new Generator(
+        "filteredseed-jungle",
+        "https://drive.google.com/uc?export=download&id=1ylj6vnCvSfm-JkGG0FcFfK9DG5lNjuxe",
+        "Classic FSG but the main structure is a jungle temple, still ruined portal"
+    ),
 ];
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

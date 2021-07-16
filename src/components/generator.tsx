@@ -6,8 +6,10 @@ export const GeneratorComponent: React.FC<{
     focused: boolean;
     setFocused: (value: string) => any;
     currentFocus: string;
-}> = ({ generator: gen, focused, setFocused, currentFocus }) => {
+    closeGen: () => any;
+}> = ({ generator: gen, focused, setFocused, currentFocus, closeGen }) => {
     const focusable = currentFocus === "";
+
     return (
         <div
             className="generator"
@@ -23,6 +25,7 @@ export const GeneratorComponent: React.FC<{
                           right: 0,
                           margin: "auto",
                           fontSize: "32px",
+                          zIndex: 100,
                       }
                     : { cursor: focusable ? "pointer" : "auto" }
             }
@@ -30,80 +33,80 @@ export const GeneratorComponent: React.FC<{
             key={gen.name}
         >
             {focused && (
-                <span
-                    style={{
-                        position: "absolute",
-                        top: -1,
-                        left: "96.5%",
-                        color: "red",
-                        background: "none",
-                        border: "none",
-                        fontSize: "28px",
-                        cursor: "pointer",
-                    }}
-                    onClick={() => setFocused("")}
-                >
-                    X
-                </span>
-            )}
-            <h1>{gen.name}</h1>
-            {focused && (
-                <div
-                    style={{
-                        display: "flex",
-                        flex: 1,
-                        justifyContent: "center",
-                        alignItems: "center",
-                        textAlign: "center",
-                        flexDirection: "column",
-                    }}
-                >
+                <>
                     <div
                         style={{
-                            maxWidth: "90%",
+                            position: "absolute",
+                            height: "100%",
                             width: "100%",
-                            overflowY: "hidden",
-                            fontSize: "32px",
-                            padding: 0,
-                            marginBottom: 0,
+                            backgroundColor: "black",
+                            opacity: 0.5,
                         }}
-                    >
-                        <p>{gen.description}</p>
-                    </div>
+                    />
+                    <a onClick={closeGen} className="close"></a>
+                </>
+            )}
+
+            <div style={{ zIndex: focused ? 101 : "auto" }}>
+                <h1>{gen.name}</h1>
+                {focused && (
                     <div
                         style={{
                             display: "flex",
-                            flexDirection: "column",
                             flex: 1,
                             justifyContent: "center",
                             alignItems: "center",
                             textAlign: "center",
+                            flexDirection: "column",
                         }}
                     >
-                        <a
+                        <div
                             style={{
-                                color: "white",
-                                textDecoration: "none",
+                                maxWidth: "90%",
+                                width: "100%",
+                                overflowY: "hidden",
+                                fontSize: "32px",
                                 padding: 0,
-                                marginBottom: "20px",
+                                marginBottom: 0,
                             }}
-                            href={gen.source}
                         >
-                            Source code
-                        </a>
-                        <a
+                            <p>{gen.description}</p>
+                        </div>
+                        <div
                             style={{
-                                color: "white",
-                                textDecoration: "none",
-                                padding: 0,
+                                display: "flex",
+                                flexDirection: "column",
+                                flex: 1,
+                                justifyContent: "center",
+                                alignItems: "center",
+                                textAlign: "center",
                             }}
-                            href={gen.url}
                         >
-                            Download it
-                        </a>
+                            <a
+                                style={{
+                                    color: "white",
+                                    textDecoration: "none",
+                                    padding: 0,
+                                    marginBottom: "20px",
+                                }}
+                                href={gen.source}
+                            >
+                                Source code
+                            </a>
+                            <a
+                                style={{
+                                    color: "white",
+                                    textDecoration: "none",
+                                    padding: 0,
+                                }}
+                                href={gen.url}
+                            >
+                                Download it
+                            </a>
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
+            </div>
         </div>
     );
 };

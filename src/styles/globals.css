@@ -1,14 +1,27 @@
 body {
     background-color: black;
     color: white;
+}
+
+.container {
     display: flex;
+    flex-direction: column;
     flex: 1;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
 }
 
+.header {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header p {
+    font-size: 28px;
+}
 .generators {
     display: flex;
     flex-direction: row;
@@ -18,8 +31,14 @@ body {
     flex-grow: 3;
 }
 
+.generatorWrapper {
+    background: solid #000;
+    opacity: 1;
+}
+
 .generator {
-    background-color: orange;
+    background: url("../public/dirt.jpg") center;
+    background-size: cover;
     width: 300px;
     height: 250px;
     margin: 20px;
@@ -37,4 +56,32 @@ body {
 
 .generator p {
     text-align: center;
+}
+
+.generator .close {
+    position: absolute;
+    left: 97%;
+    top: -16px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    cursor: pointer;
+}
+.generator .close:hover {
+    opacity: 0.5;
+}
+.generator .close:before,
+.generator .close:after {
+    position: absolute;
+    left: 15px;
+    content: " ";
+    height: 33px;
+    width: 2px;
+    background-color: #ff0000;
+}
+.generator .close:before {
+    transform: rotate(45deg);
+}
+.generator .close:after {
+    transform: rotate(-45deg);
 }
