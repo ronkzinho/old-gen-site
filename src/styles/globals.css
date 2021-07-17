@@ -86,7 +86,7 @@ body {
     text-align: center;
 }
 
-.generator .closeWrapper {
+.closeWrapper {
     position: absolute;
     left: calc(100% - 32px);
     top: 0px;
@@ -99,15 +99,15 @@ body {
     border-radius: 4px;
 }
 
-.generator .close {
+.close {
     opacity: 1;
 }
 
-.generator .closeWrapper:hover .close {
+.closeWrapper:hover .close {
     opacity: 0.8;
 }
-.generator .close:before,
-.generator .close:after {
+.close:before,
+.close:after {
     position: absolute;
     left: 15px;
     content: " ";
@@ -115,10 +115,10 @@ body {
     width: 2px;
     background-color: #fff;
 }
-.generator .close:before {
+.close:before {
     transform: rotate(45deg);
 }
-.generator .close:after {
+.close:after {
     transform: rotate(-45deg);
 }
 
