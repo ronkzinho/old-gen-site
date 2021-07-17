@@ -30,6 +30,11 @@ export default function Home() {
         <>
             <Head>
                 <title>Old Gen Optimizer</title>
+                <link
+                    rel="icon"
+                    type="image/x-icon"
+                    href="/images/favicon.ico"
+                />
             </Head>
             <div className="container">
                 <div className="header">
