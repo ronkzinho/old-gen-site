@@ -43,11 +43,6 @@ export const GeneratorComponent: React.FC<{
                     backdropFilter: focused ? "brightness(.5)" : "none",
                 }}
             >
-                {focused && (
-                    <div onClick={closeGen} className="closeWrapper">
-                        <a className="close"></a>
-                    </div>
-                )}
                 <div style={{ zIndex: focused ? 101 : "auto" }}>
                     <h1>{gen.name}</h1>
                     {focused && (
@@ -104,6 +99,14 @@ export const GeneratorComponent: React.FC<{
                                 >
                                     Download it
                                 </a>
+                                {focused && (
+                                    <div
+                                        onClick={closeGen}
+                                        className="closeWrapper"
+                                    >
+                                        <a className="close"></a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     )}

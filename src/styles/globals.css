@@ -104,7 +104,7 @@ body {
 }
 
 .closeWrapper:hover .close {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 .close:before,
 .close:after {
