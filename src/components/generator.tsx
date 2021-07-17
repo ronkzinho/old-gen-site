@@ -16,7 +16,7 @@ export const GeneratorComponent: React.FC<{
             style={
                 focused
                     ? {
-                          position: "absolute",
+                          position: "fixed",
                           width: "750px",
                           height: "500px",
                           top: 0,
@@ -36,7 +36,7 @@ export const GeneratorComponent: React.FC<{
                 <>
                     <div
                         style={{
-                            position: "absolute",
+                            position: "fixed",
                             height: "100%",
                             width: "100%",
                             backgroundColor: "black",

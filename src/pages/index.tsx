@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { GeneratorComponent } from "../components/generator";
 import { generators } from "./api/generators";
 
@@ -13,6 +12,11 @@ export default function Home() {
 
         return () => window.removeEventListener("keydown", handleKeyDown);
     });
+
+    useEffect(() => {
+        if (focused !== "") document.body.style.overflowY = "visible";
+        else document.body.style.overflowY = "scroll";
+    }, [focused]);
 
     const handleKeyDown = (key: KeyboardEvent) => {
         if (key.code === "Escape") closeGen();
