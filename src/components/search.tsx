@@ -15,7 +15,7 @@ export const Search: React.FC<searchProps> = ({ search, setSearch }) => {
         }
     }, [search]);
     return (
-        <div>
+        <>
             <p>Search for generators</p>
             <input
                 className="search"
@@ -23,6 +23,6 @@ export const Search: React.FC<searchProps> = ({ search, setSearch }) => {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
             />
-        </div>
+        </>
     );
 };
