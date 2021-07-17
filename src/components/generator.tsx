@@ -26,8 +26,12 @@ export const GeneratorComponent: React.FC<{
                           margin: "auto",
                           fontSize: "32px",
                           zIndex: 100,
+                          backdropFilter: "blur(10px)",
                       }
-                    : { cursor: focusable ? "pointer" : "auto" }
+                    : {
+                          cursor: focusable ? "pointer" : "auto",
+                          filter: currentFocus !== "" ? "blur(10px)" : "none",
+                      }
             }
             onClick={() => currentFocus === "" && setFocused(gen.name)}
             key={gen.name}

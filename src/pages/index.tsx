@@ -33,7 +33,10 @@ export default function Home() {
                 <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
             <div className="container">
-                <div className="header">
+                <div
+                    className="header"
+                    style={{ filter: focused ? "blur(10px)" : "none" }}
+                >
                     <p>Hey, how are you doing?</p>
                     <p>
                         So I made this for make my life easier but now I just
