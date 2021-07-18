@@ -41,10 +41,12 @@ export const GeneratorComponent: React.FC<{
                     width: "100%",
                     height: "100%",
                     backdropFilter: focused ? "brightness(.5)" : "none",
+                    overflow: "auto",
                 }}
             >
                 <div style={{ zIndex: focused ? 101 : "auto" }}>
                     <h1>{gen.name}</h1>
+                    <p className="sha">sha256sum: {gen.sha256sum}</p>
                     {focused && (
                         <div
                             style={{

@@ -82,6 +82,11 @@ body {
     text-align: center;
 }
 
+.sha {
+    word-break: break-all;
+    font-size: 16px;
+}
+
 .generator p {
     text-align: center;
 }
