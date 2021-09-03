@@ -87,6 +87,13 @@ export default function Home() {
                             .sort((a, b) =>
                                 a.name < b.name ? -1 : a.name > b.name ? 1 : 0
                             )
+                            .sort((a, b) =>
+                                a.verifiable === false
+                                    ? 1
+                                    : b.verifiable === false
+                                    ? -1
+                                    : 0
+                            )
                             .map((gen) => (
                                 <GeneratorComponent
                                     key={gen.name}

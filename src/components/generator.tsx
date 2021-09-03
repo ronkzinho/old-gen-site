@@ -40,13 +40,34 @@ export const GeneratorComponent: React.FC<{
                 style={{
                     width: "100%",
                     height: "100%",
-                    backdropFilter: focused ? "brightness(.5)" : "none",
+                    backdropFilter:
+                        focused || gen.verifiable === false
+                            ? "brightness(.5)"
+                            : "none",
                     overflow: "auto",
+                    display: "grid",
                 }}
             >
-                <div style={{ zIndex: focused ? 101 : "auto" }}>
-                    <h1>{gen.name}</h1>
+                <div
+                    style={{
+                        zIndex: focused ? 101 : "auto",
+                        display: "inline",
+                        margin: "auto",
+                        maxWidth: "80%",
+                    }}
+                >
+                    <h1
+                        style={gen.verifiable === false ? { color: "red" } : {}}
+                    >
+                        {gen.name}
+                    </h1>
                     <p className="sha">sha256sum: {gen.sha256sum}</p>
+                    {focused && gen.verifiable === false && (
+                        <p className="notVerifiable">
+                            Runs using this filter/generator won't be able to
+                            get verified
+                        </p>
+                    )}
                     {focused && (
                         <div
                             style={{

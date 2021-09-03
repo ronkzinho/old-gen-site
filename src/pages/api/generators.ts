@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import gens from "../../../public/generators.json";
-import crypto from "crypto";
 
 interface IGenerator extends Generator {}
 
@@ -10,12 +9,14 @@ export class Generator implements IGenerator {
     name: string;
     url: string;
     description?: string;
-    constructor({ sha256sum, name, url, description }: IGenerator) {
+    verifiable?: boolean;
+    constructor({ sha256sum, name, url, description, verifiable }: IGenerator) {
         this.sha256sum = sha256sum;
         this.name = name;
         this.url = url;
         this.description = description;
         this.source = `https://replit.com/@AndyNovo/${this.name}`;
+        this.verifiable = verifiable !== null ? verifiable : true;
     }
 }
 
