@@ -64,8 +64,8 @@ export const GeneratorComponent: React.FC<{
                     <p className="sha">sha256sum: {gen.sha256sum}</p>
                     {focused && gen.verifiable === false && (
                         <p className="notVerifiable">
-                            Runs using this filter/generator won't be able to
-                            get verified
+                            Runs using this filter/generator won{"'"}t be able
+                            to get verified
                         </p>
                     )}
                     {focused && (
