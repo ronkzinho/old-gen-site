@@ -84,6 +84,13 @@
             "url": "https://drive.google.com/uc?export=download&id=1VnzPa5Nl1vz9xUk00DZzjZLdvPPdsNlD",
             "description": "same thing as fsg-power-village-plus-plus but without checking the stronghold.",
             "verifiable": false
+        },
+        {
+            "sha256sum": "6391a1b9ba50bfec071979624640ec414519521e640624b1842065adf0eca8d0",
+            "name": "fsg-power-ship-without-blind",
+            "url": "https://drive.google.com/uc?export=download&id=1ia-lf9A8d2TttNQ12sZJUwib-Hs9TEMY",
+            "description": "same thing as fsg-power-ship but without checking the stronghold.",
+            "verifiable": false
         }
     ]
 }
