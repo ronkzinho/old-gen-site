@@ -1,96 +1,98 @@
 {
-    "generators": [
-        {
-            "sha256sum": "f437e2c605e6952b62b111005989f112e521071d51447bec3fd2cc7d91142d36",
-            "name": "fsg-power-village-plusplus",
-            "url": "https://drive.google.com/uc?export=download&id=1vcJPJhuT11jfJreKElmQL7PdfJIZ3Lv2",
-            "description": "village, ruined portals with good loot, classic FSG nether, blind travel to deep ocean stronghold"
-        },
-        {
-            "sha256sum": "daca012eb02c5fa1178c114595058fa5f038ab099eeca29fb126276aca1bd345",
-            "name": "filteredseed",
-            "url": "https://drive.google.com/uc?export=download&id=1mpWw28TCCJixqdnx_iFcPq0G5qxuttnj",
-            "description": "The classic filter: village or shipwreck, ruined portal, bastion in pos/pos, fortress in pos/neg or neg/pos blind travel from the fortress quadrant at +/-150,-/+150"
-        },
-        {
-            "sha256sum": "6c07056fc6d1c42e02b9daa586a4a8355cb204f79afd283d090bbe36d01d4df5",
-            "name": "fsg-power-village-minus-minus",
-            "url": "https://drive.google.com/uc?export=download&id=1hzBE_BkU_3vnAYUW7XniM-NP2DwUu3G4",
-            "description": "Village only, ruined portal loot has 3 iron, and a lighter no desert / snowy tundra villages"
-        },
-        {
-            "sha256sum": "fc641dad7d8fec3d0ad10859a63867549ba17d218643720f2bcb1c8fdbf8f585",
-            "name": "filteredvillage",
-            "url": "https://drive.google.com/uc?export=download&id=1yU37zZVmPc56CKbEW4NuNwxGXI6CCKaT",
-            "description": "Classic but only village"
-        },
-        {
-            "sha256sum": "2b4ca190e7db5d29f37c9cb406fb7101d67551ee3171ae5f368558c8a0037c31",
-            "name": "filteredshipwreck",
-            "url": "https://drive.google.com/uc?export=download&id=1LwnfHg3BAOiYKw7nxRWwU9UEfyq4FAE1",
-            "description": "Classic but only shipwreck"
-        },
-        {
-            "sha256sum": "5fffce98076a27d152a322cdbda8f51555131479292677d3e97eb53342a6539b",
-            "name": "fsg-power-ship",
-            "url": "https://drive.google.com/uc?export=download&id=1xmTpoow6ODuhGo6NwqZwdoW_jI09uPwo",
-            "description": "Shipwrecks, magma ravines, ruined portals with good loot, classic FSG nether, blind travel to ocean stronghold"
-        },
-        {
-            "sha256sum": "c8cd6b9da1cbadc7044d7c00955ff7f8c4899b1633bc0dee1397e9f186bd12cd",
-            "name": "ruined-portal-loot",
-            "url": "https://drive.google.com/uc?export=download&id=1K_YdBUfr2ANdLVfTABV-CE_MIb4k3_Xv",
-            "description": "Coinflip shipwreck/village with ruined portal loot having a fitness function (typically 3 iron and a lighter), blind travel from either -150,150 or 150,-150"
-        },
-        {
-            "sha256sum": "e9970f1217087bc3da1b60b034264469137a2b20a7c07cbba5489e5090d09b8b",
-            "name": "fsg-power-village",
-            "url": "https://drive.google.com/uc?export=download&id=1WfqcGt2vzeQANJGJefCRkYkBhfgK8vHW",
-            "description": "village, ruined portals with good loot, classic FSG nether, blind travel to stronghold"
-        },
-        {
-            "sha256sum": "d3739ce09a00d6b10275a8d2ccf0a2bdd5850cac1bc320cfa43c59c6e9faa84c",
-            "name": "filteredseed-jungle",
-            "url": "https://drive.google.com/uc?export=download&id=1ylj6vnCvSfm-JkGG0FcFfK9DG5lNjuxe",
-            "description": "Classic FSG but the main structure is a jungle temple, still ruined portal"
-        },
-        {
-            "sha256sum": "e5f6d45a4d7c6d26bbb16b924f71a85fb92c5150aaf7cc8bd16a7b9489550d66",
-            "name": "obiseeds",
-            "url": "https://drive.google.com/uc?export=download&id=1mKza0hY0-Qjg7O3sNXCIQB4t2HFCCELs",
-            "description": "Practice Seeds: ruined portal has 10 obi and a light, the nether is less linear than normal FSG"
-        },
-        {
-            "sha256sum": "48dd17d2126c18ab6847c6a70103e3bff8ed301d9c3b6ca3dfba931381c61176",
-            "name": "worstseed",
-            "url": "https://drive.google.com/uc?export=download&id=1QaGzO3vw1DQH2fCIDHuWaUdf6pMme4nr",
-            "description": "Seeds with a terrible nether, no bastions in the 4 primary quadrants"
-        },
-        {
-            "sha256sum": "24642b03f8fe273c9cb94f414ea6b6d145e44d535320c9d125b1e2a519dd163f",
-            "name": "fsg-power-village-looting-sword",
-            "url": "https://drive.google.com/uc?export=download&id=11dWN5M3yJXrCmpLHXs8UStICbMvc4OKr",
-            "description": "Village only, ruined portal loot has looting 2/3 sword, iron, and a lighter"
-        },
-        {
-            "sha256sum": "48a7f447677f3ba3a23dc5f1e5146ab86a7193d36b9a062f278dbdf4ccb02355",
-            "name": "co-op-fsg",
-            "url": "https://drive.google.com/uc?export=download&id=1Uq3g08o2WaDeUVunrFv7VvmzEP0KF8UA",
-            "description": "plains village, ruined portals with good loot, classic FSG nether, blind travel in ++ to deep ocean stronghold"
-        },
-        {
-            "sha256sum": "1347d5f368817dca9a37dfbdb5d232685eea7587bb6ecabd33d37aa9dfc9fa38",
-            "name": "fsg-power-village-plusplus-without-blind",
-            "url": "https://drive.google.com/uc?export=download&id=1VnzPa5Nl1vz9xUk00DZzjZLdvPPdsNlD",
-            "description": "same thing as fsg-power-village-plus-plus but without checking the stronghold.",
-            "verifiable": false
-        },
-        {
-            "sha256sum": "6391a1b9ba50bfec071979624640ec414519521e640624b1842065adf0eca8d0",
-            "name": "fsg-power-ship-without-blind",
-            "url": "https://drive.google.com/uc?export=download&id=1ia-lf9A8d2TttNQ12sZJUwib-Hs9TEMY",
-            "description": "same thing as fsg-power-ship but without checking the stronghold.",
-            "verifiable": false
-        }
-    ]
+  "generators": [
+    {
+      "sha256sum": "f437e2c605e6952b62b111005989f112e521071d51447bec3fd2cc7d91142d36",
+      "name": "fsg-power-village-plusplus",
+      "url": "https://drive.google.com/uc?export=download&id=1vcJPJhuT11jfJreKElmQL7PdfJIZ3Lv2",
+      "description": "village, ruined portals with good loot, classic FSG nether, blind travel to deep ocean stronghold"
+    },
+    {
+      "sha256sum": "daca012eb02c5fa1178c114595058fa5f038ab099eeca29fb126276aca1bd345",
+      "name": "filteredseed",
+      "url": "https://drive.google.com/uc?export=download&id=1mpWw28TCCJixqdnx_iFcPq0G5qxuttnj",
+      "description": "The classic filter: village or shipwreck, ruined portal, bastion in pos/pos, fortress in pos/neg or neg/pos blind travel from the fortress quadrant at +/-150,-/+150"
+    },
+    {
+      "sha256sum": "6c07056fc6d1c42e02b9daa586a4a8355cb204f79afd283d090bbe36d01d4df5",
+      "name": "fsg-power-village-minus-minus",
+      "url": "https://drive.google.com/uc?export=download&id=1hzBE_BkU_3vnAYUW7XniM-NP2DwUu3G4",
+      "description": "Village only, ruined portal loot has 3 iron, and a lighter no desert / snowy tundra villages"
+    },
+    {
+      "sha256sum": "fc641dad7d8fec3d0ad10859a63867549ba17d218643720f2bcb1c8fdbf8f585",
+      "name": "filteredvillage",
+      "url": "https://drive.google.com/uc?export=download&id=1yU37zZVmPc56CKbEW4NuNwxGXI6CCKaT",
+      "description": "Classic but only village"
+    },
+    {
+      "sha256sum": "2b4ca190e7db5d29f37c9cb406fb7101d67551ee3171ae5f368558c8a0037c31",
+      "name": "filteredshipwreck",
+      "url": "https://drive.google.com/uc?export=download&id=1LwnfHg3BAOiYKw7nxRWwU9UEfyq4FAE1",
+      "description": "Classic but only shipwreck"
+    },
+    {
+      "sha256sum": "5fffce98076a27d152a322cdbda8f51555131479292677d3e97eb53342a6539b",
+      "name": "fsg-power-ship",
+      "url": "https://drive.google.com/uc?export=download&id=1xmTpoow6ODuhGo6NwqZwdoW_jI09uPwo",
+      "description": "Shipwrecks, magma ravines, ruined portals with good loot, classic FSG nether, blind travel to ocean stronghold"
+    },
+    {
+      "sha256sum": "c8cd6b9da1cbadc7044d7c00955ff7f8c4899b1633bc0dee1397e9f186bd12cd",
+      "name": "ruined-portal-loot",
+      "url": "https://drive.google.com/uc?export=download&id=1K_YdBUfr2ANdLVfTABV-CE_MIb4k3_Xv",
+      "description": "Coinflip shipwreck/village with ruined portal loot having a fitness function (typically 3 iron and a lighter), blind travel from either -150,150 or 150,-150"
+    },
+    {
+      "sha256sum": "e9970f1217087bc3da1b60b034264469137a2b20a7c07cbba5489e5090d09b8b",
+      "name": "fsg-power-village",
+      "url": "https://drive.google.com/uc?export=download&id=1WfqcGt2vzeQANJGJefCRkYkBhfgK8vHW",
+      "description": "village, ruined portals with good loot, classic FSG nether, blind travel to stronghold"
+    },
+    {
+      "sha256sum": "d3739ce09a00d6b10275a8d2ccf0a2bdd5850cac1bc320cfa43c59c6e9faa84c",
+      "name": "filteredseed-jungle",
+      "url": "https://drive.google.com/uc?export=download&id=1ylj6vnCvSfm-JkGG0FcFfK9DG5lNjuxe",
+      "description": "Classic FSG but the main structure is a jungle temple, still ruined portal"
+    },
+    {
+      "sha256sum": "e5f6d45a4d7c6d26bbb16b924f71a85fb92c5150aaf7cc8bd16a7b9489550d66",
+      "name": "obiseeds",
+      "url": "https://drive.google.com/uc?export=download&id=1mKza0hY0-Qjg7O3sNXCIQB4t2HFCCELs",
+      "description": "Practice Seeds: ruined portal has 10 obi and a light, the nether is less linear than normal FSG"
+    },
+    {
+      "sha256sum": "48dd17d2126c18ab6847c6a70103e3bff8ed301d9c3b6ca3dfba931381c61176",
+      "name": "worstseed",
+      "url": "https://drive.google.com/uc?export=download&id=1QaGzO3vw1DQH2fCIDHuWaUdf6pMme4nr",
+      "description": "Seeds with a terrible nether, no bastions in the 4 primary quadrants"
+    },
+    {
+      "sha256sum": "24642b03f8fe273c9cb94f414ea6b6d145e44d535320c9d125b1e2a519dd163f",
+      "name": "fsg-power-village-looting-sword",
+      "url": "https://drive.google.com/uc?export=download&id=11dWN5M3yJXrCmpLHXs8UStICbMvc4OKr",
+      "description": "Village only, ruined portal loot has looting 2/3 sword, iron, and a lighter"
+    },
+    {
+      "sha256sum": "48a7f447677f3ba3a23dc5f1e5146ab86a7193d36b9a062f278dbdf4ccb02355",
+      "name": "co-op-fsg",
+      "url": "https://drive.google.com/uc?export=download&id=1Uq3g08o2WaDeUVunrFv7VvmzEP0KF8UA",
+      "description": "plains village, ruined portals with good loot, classic FSG nether, blind travel in ++ to deep ocean stronghold"
+    },
+    {
+      "sha256sum": "1347d5f368817dca9a37dfbdb5d232685eea7587bb6ecabd33d37aa9dfc9fa38",
+      "name": "fsg-power-village-plusplus-without-blind",
+      "url": "https://drive.google.com/uc?export=download&id=1VnzPa5Nl1vz9xUk00DZzjZLdvPPdsNlD",
+      "description": "same thing as fsg-power-village-plus-plus but without checking the stronghold.",
+      "verifiable": false,
+      "source": null
+    },
+    {
+      "sha256sum": "6391a1b9ba50bfec071979624640ec414519521e640624b1842065adf0eca8d0",
+      "name": "fsg-power-ship-without-blind",
+      "url": "https://drive.google.com/uc?export=download&id=1ia-lf9A8d2TttNQ12sZJUwib-Hs9TEMY",
+      "description": "same thing as fsg-power-ship but without checking the stronghold.",
+      "verifiable": false,
+      "source": null
+    }
+  ]
 }
