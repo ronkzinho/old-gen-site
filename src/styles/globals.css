@@ -94,7 +94,7 @@ body {
   align-items: center;
   text-align: center;
   border-radius: 4px;
-  border: solid 0.5px white;
+  border: solid 1.5px white;
 }
 
 .generator {
@@ -109,6 +109,16 @@ body {
 
 .generatorContainer h1 {
   text-align: center;
+}
+
+.generatorContainer {
+  transition: cubic-bezier(1, 0, 0, 1) 0;
+  animation-fill-mode: forwards;
+}
+
+.generaotr::before {
+  width: 300px;
+  height: 250px;
 }
 
 .sha {

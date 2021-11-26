@@ -28,19 +28,20 @@ export const GeneratorComponent: React.FC<{
 
   return (
     <div
-      className="generatorContainer"
+      className={focused ? "generatorContainer focused" : "generatorContainer"}
       style={
         focused
           ? {
               position: "fixed",
               width: "80%",
               height: "90%",
+              maxWidth: "80%",
               top: 0,
               bottom: 0,
               left: 0,
               right: 0,
               margin: "auto",
-              fontSize: "32px",
+              fontSize: "calc(16px + 1vw)",
               zIndex: 100,
               pointerEvents: "auto",
             }
@@ -77,12 +78,16 @@ export const GeneratorComponent: React.FC<{
           <h1 style={gen.verifiable === false ? { color: "red" } : {}}>
             {gen.name}
           </h1>
-          <p style={!focused ? { color: "white" } : {}} className="sha">
-            sha256sum: {gen.sha256sum}
-          </p>
+          {!gen.isGroup && (
+            <p style={!focused ? { color: "white" } : {}} className="sha">
+              sha256sum: {gen.sha256sum}
+            </p>
+          )}
           {focused && gen.verifiable === false && (
             <p className="notVerifiable">
-              Runs using this filter/generator won{"'"}t be able to get verified
+              Runs using this {gen.isGroup && "group of"} filter
+              {gen.isGroup && "s"}/generator{gen.isGroup && "s"} won{"'"}t be
+              able to get verified
             </p>
           )}
           {focused && (
@@ -101,52 +106,56 @@ export const GeneratorComponent: React.FC<{
                   maxWidth: "90%",
                   width: "100%",
                   overflowY: "hidden",
-                  fontSize: "32px",
+                  fontSize: "100%",
                   padding: 0,
                   marginBottom: 0,
                 }}
               >
-                <p>{gen.description}</p>
+                {gen.description?.split("\n").map((str) => (
+                  <p key={str}>{str}</p>
+                ))}
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  flex: 1,
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                }}
-              >
-                {gen.source && (
+              {!gen.isGroup && (
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    flex: 1,
+                    justifyContent: "center",
+                    alignItems: "center",
+                    textAlign: "center",
+                  }}
+                >
+                  {gen.source && (
+                    <a
+                      style={{
+                        color: "white",
+                        textDecoration: "none",
+                        padding: 0,
+                        marginBottom: "20px",
+                      }}
+                      href={gen.source}
+                    >
+                      <button className="link">Source code</button>
+                    </a>
+                  )}
                   <a
                     style={{
                       color: "white",
                       textDecoration: "none",
                       padding: 0,
-                      marginBottom: "20px",
                     }}
-                    href={gen.source}
+                    href={gen.url}
                   >
-                    <button className="link">Source code</button>
+                    <button className="link">Download it</button>
                   </a>
-                )}
-                <a
-                  style={{
-                    color: "white",
-                    textDecoration: "none",
-                    padding: 0,
-                  }}
-                  href={gen.url}
-                >
-                  <button className="link">Download it</button>
-                </a>
-                {focused && (
-                  <div onClick={closeGen} className="closeWrapper">
-                    <a className="close"></a>
-                  </div>
-                )}
-              </div>
+                  {focused && (
+                    <div onClick={closeGen} className="closeWrapper">
+                      <a className="close"></a>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
         </div>

@@ -79,12 +79,20 @@
       "description": "plains village, ruined portals with good loot, classic FSG nether, blind travel in ++ to deep ocean stronghold"
     },
     {
+      "sha256sum": "88c6700c94c30dbfab575be3133aa5b946350d89dad81ea5b138f37053affed0",
+      "name": "filteredseed-rsgspawn",
+      "url": "https://drive.google.com/uc?export=download&id=1net7f9V-o6ZzmUBb8Yfv1_R6lok7AAUH",
+      "description": "Practice Seeds: Classic FSG nether and no other filters for the overworld",
+      "source": "https://replit.com/@AndyNovo/filteredseed-rsgspawn"
+    },
+    {
       "sha256sum": "1347d5f368817dca9a37dfbdb5d232685eea7587bb6ecabd33d37aa9dfc9fa38",
       "name": "fsg-power-village-plusplus-without-blind",
       "url": "https://drive.google.com/uc?export=download&id=1VnzPa5Nl1vz9xUk00DZzjZLdvPPdsNlD",
       "description": "same thing as fsg-power-village-plus-plus but without checking the stronghold.",
       "verifiable": false,
-      "source": null
+      "source": null,
+      "visible": false
     },
     {
       "sha256sum": "6391a1b9ba50bfec071979624640ec414519521e640624b1842065adf0eca8d0",
@@ -92,7 +100,17 @@
       "url": "https://drive.google.com/uc?export=download&id=1ia-lf9A8d2TttNQ12sZJUwib-Hs9TEMY",
       "description": "same thing as fsg-power-ship but without checking the stronghold.",
       "verifiable": false,
-      "source": null
+      "source": null,
+      "visible": false
+    },
+    {
+      "sha256sum": "8c703bd1401d51acf3b9fdcffc306dcb29780c1628541f81af5b85ecbf2ebd2a",
+      "name": "filteredseed-rsgspawn-without-blind",
+      "url": "https://drive.google.com/uc?export=download&id=1reAGoSLnlvpyc7_M_VwXm9Ukatl3VZ7E",
+      "description": "same thing as filteredseed-rsgspawn but without checking the stronghold.",
+      "verifiable": false,
+      "source": null,
+      "visible": false
     }
   ]
 }

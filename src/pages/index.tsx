@@ -31,9 +31,14 @@ export default function Home() {
       </Head>
       <div
         className="container"
-        style={{
-          pointerEvents: focused ? "none" : "auto",
-        }}
+        style={
+          focused
+            ? {
+                pointerEvents: "none",
+                position: "fixed",
+              }
+            : {}
+        }
       >
         <div style={{ filter: focused ? "blur(10px)" : "none" }}>
           <div className="header">
