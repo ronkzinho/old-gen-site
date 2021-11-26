@@ -41,7 +41,6 @@ export const generators: Generator[] = gens.generators.map(
 );
 
 const wbGens = generators.filter((gen) => gen.name.includes("-without-blind"));
-console.log(wbGens);
 const randomWbGen = wbGens[Math.floor(Math.random() * wbGens.length)];
 
 generators.push(

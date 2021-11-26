@@ -81,6 +81,7 @@ export default function Home() {
         {showGenerators && (
           <div className="generators">
             {generators
+              .filter((gen) => gen.visible !== false)
               .filter(
                 (gen) =>
                   gen.name.slice(0, search.length).toLocaleLowerCase() ===
