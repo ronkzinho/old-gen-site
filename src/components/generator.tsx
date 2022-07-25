@@ -61,7 +61,7 @@ export const GeneratorComponent: React.FC<{
           width: "100%",
           height: "100%",
           backdropFilter:
-            focused || gen.verifiable === false ? "brightness(.5)" : "none",
+            focused || gen.verifiable === false ? "brightness(.5)" : "brightness(.8)",
           overflow: focused ? "auto" : "hidden",
           display: "grid",
         }}
@@ -79,7 +79,7 @@ export const GeneratorComponent: React.FC<{
             {gen.name}
           </h1>
           {!gen.isGroup && (
-            <p style={!focused ? { color: "white" } : {}} className="sha">
+            <p className="sha">
               sha256sum: {gen.sha256sum}
             </p>
           )}

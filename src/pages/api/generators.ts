@@ -46,7 +46,7 @@ const randomWbGen = wbGens[Math.floor(Math.random() * wbGens.length)];
 generators.push(
   new Generator({
     name: "+without-blind",
-    description: `add a without-blind sufix to any generator that filters a stronghold.~\nExample: ${randomWbGen.name.replace(
+    description: `add a without-blind suffix to any generator that filters a stronghold.~\nExample: ${randomWbGen.name.replace(
       "-without-blind",
       ""
     )} -> ${randomWbGen.name}`,

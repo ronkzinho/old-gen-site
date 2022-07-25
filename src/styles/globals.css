@@ -5,8 +5,12 @@
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: #090909;
+    color: #efefef;
+}
+
+button {
+    cursor: pointer;
 }
 
 .header {
@@ -80,7 +84,8 @@ body {
     align-items: center;
     text-align: center;
     border-radius: 4px;
-    border: solid 0.5px white;
+    border: solid 1px #757575;
+    transition: margin-left .2s 0.3s;
 }
 
 .generator {
@@ -241,4 +246,18 @@ input::-webkit-input-placeholder {
 }
 .searchWrapper input::-webkit-input-placeholder {
     color: transparent;
+}
+
+.notVerifiable {
+    color: #a81717;
+    font-weight: bold;
+}
+
+.link {
+    background-color: rgba(23, 23, 23, 0.7);
+    color: white;
+    font-size: 38px;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
 }

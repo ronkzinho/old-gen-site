@@ -63,7 +63,7 @@ export default function Home() {
                                 gen.name
                                     .slice(0, search.length)
                                     .toLocaleLowerCase() ===
-                                search.toLocaleLowerCase()
+                                search.toLocaleLowerCase() && gen.visible != false
                         )
                         .sort((a, b) =>
                             a.name < b.name ? -1 : a.name > b.name ? 1 : 0
