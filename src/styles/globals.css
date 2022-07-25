@@ -54,6 +54,10 @@ body {
     margin-top: 20px;
 }
 
+.generators, .searchWrapper {
+    transition: visibility 1s, opacity 1s;
+}
+
 .generators {
     display: flex;
     flex-direction: row;
@@ -62,8 +66,6 @@ body {
     flex-wrap: wrap;
     flex-grow: 3;
     max-width: 100%;
-    width: 100%;
-    transition: opacity 1s ease-in-out;
 }
 
 .generatorContainer {
@@ -88,6 +90,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    -webkit-transition: ;
 }
 
 .generatorContainer h1 {
@@ -217,7 +220,6 @@ input::-webkit-input-placeholder {
     color: #999;
 }
 
-/* Demo 2 */
 .searchWrapper .search {
     width: 15px;
     padding-left: 10px;

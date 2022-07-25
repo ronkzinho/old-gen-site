@@ -42,22 +42,21 @@ export default function Home() {
                             {showGenerators ? "Hide" : "Show"} generators
                         </button>
                     </div>
-                    {showGenerators && (
-                        <div
-                            className="searchWrapper"
-                            style={{
-                                display: "flex",
-                                flex: 1,
-                                flexDirection: "column",
-                                justifyContent: "center",
-                                alignItems: "center",
-                            }}
-                        >
-                            <Search search={search} setSearch={setSearch} />
-                        </div>
-                    )}
+                    <div
+                        className="searchWrapper"
+                        style={{
+                            display: "flex",
+                            flex: 1,
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            visibility: showGenerators ? "visible" : "hidden", opacity: showGenerators ? "1" : 0
+                        }}
+                    >
+                        <Search search={search} setSearch={setSearch} />
+                    </div>
                 </div>
-                <div style={{ "visibility": showGenerators ? "visible" : "hidden", opacity: showGenerators ? "1" : 0 }} className="generators">
+                <div style={{ visibility: showGenerators ? "visible" : "hidden", opacity: showGenerators ? "1" : 0 }} className="generators">
                     {generators
                         .filter(
                             (gen) =>
