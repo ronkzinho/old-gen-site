@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { GeneratorComponent } from "../components/generator";
 import { Search } from "../components/search";
 import { generators } from "./api/generators";
@@ -37,25 +37,8 @@ export default function Home() {
             <div className="container">
                 <div style={{ filter: focused ? "blur(10px)" : "none" }}>
                     <div className="header">
-                        <p>Hey, how are you doing?</p>
-                        <p>
-                            So I made this for make my life easier but now I
-                            just want to help for those who want to run old FSG
-                            generators locally.
-                        </p>
-                        <p>
-                            If you don{"'"}t have the macro/consumer of this
-                            api, you can download it{" "}
-                            <a href="https://github.com/ronkzinho/oldgenoptimizer/releases/latest/download/optimizer.zip">
-                                here
-                            </a>
-                            . Also, you should check the{" "}
-                            <a href="https://github.com/ronkzinho/oldgenoptimizer/blob/main/README.md">
-                                README file
-                            </a>{" "}
-                            for the requirements, and how to setup everything!
-                        </p>
-                        <button onClick={() => setSG(!showGenerators)}>
+                        <h1>Run old FSG generators with or without the <a href="https://github.com/ronkzinho/oldgenoptimizer/releases/latest/">macro</a></h1>
+                        <button className="showGens" onClick={() => setSG(!showGenerators)}>
                             {showGenerators ? "Hide" : "Show"} generators
                         </button>
                     </div>
@@ -74,38 +57,36 @@ export default function Home() {
                         </div>
                     )}
                 </div>
-                {showGenerators && (
-                    <div className="generators">
-                        {generators
-                            .filter(
-                                (gen) =>
-                                    gen.name
-                                        .slice(0, search.length)
-                                        .toLocaleLowerCase() ===
-                                    search.toLocaleLowerCase()
-                            )
-                            .sort((a, b) =>
-                                a.name < b.name ? -1 : a.name > b.name ? 1 : 0
-                            )
-                            .sort((a, b) =>
-                                a.verifiable === false
-                                    ? 1
-                                    : b.verifiable === false
-                                    ? -1
-                                    : 0
-                            )
-                            .map((gen) => (
-                                <GeneratorComponent
-                                    key={gen.name}
-                                    generator={gen}
-                                    focused={focused === gen.name}
-                                    setFocused={setFocused}
-                                    currentFocus={focused}
-                                    closeGen={closeGen}
-                                />
-                            ))}
-                    </div>
-                )}
+                <div style={{ "visibility": showGenerators ? "visible" : "hidden", opacity: showGenerators ? "1" : 0 }} className="generators">
+                    {generators
+                        .filter(
+                            (gen) =>
+                                gen.name
+                                    .slice(0, search.length)
+                                    .toLocaleLowerCase() ===
+                                search.toLocaleLowerCase()
+                        )
+                        .sort((a, b) =>
+                            a.name < b.name ? -1 : a.name > b.name ? 1 : 0
+                        )
+                        .sort((a, b) =>
+                            a.verifiable === false
+                                ? 1
+                                : b.verifiable === false
+                                ? -1
+                                : 0
+                        )
+                        .map((gen) => (
+                            <GeneratorComponent
+                                key={gen.name}
+                                generator={gen}
+                                focused={focused === gen.name}
+                                setFocused={setFocused}
+                                currentFocus={focused}
+                                closeGen={closeGen}
+                            />
+                        ))}
+                </div>
             </div>
         </>
     );

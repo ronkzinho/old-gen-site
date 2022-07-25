@@ -1,20 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 * {
-    font-family: "Rubik";
+    font-family: "Rubik", serif;
 }
 
 body {
     background-color: black;
     color: white;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    justify-content: center;
-    align-items: flex-end;
 }
 
 .header {
@@ -23,6 +15,25 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    font-size: 24px;
+}
+
+.showGens {
+    background-color: #517f58;
+    color: white;
+    font-size: 28px;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
 }
 
 .header p {
@@ -52,6 +63,7 @@ body {
     flex-grow: 3;
     max-width: 100%;
     width: 100%;
+    transition: opacity 1s ease-in-out;
 }
 
 .generatorContainer {
@@ -124,7 +136,7 @@ body {
 .closeWrapper {
     position: absolute;
     left: calc(100% - 32px);
-    top: 0px;
+    top: 0;
     max-width: 32px;
     max-height: 32px;
     width: 100%;
@@ -177,7 +189,7 @@ input[type="search"] {
         no-repeat 9px center;
     border: solid 1px #ccc;
     padding: 9px 10px 9px 32px;
-    width: 55px;
+    width: 300px;
 
     -webkit-border-radius: 10em;
     -moz-border-radius: 10em;
@@ -189,7 +201,7 @@ input[type="search"] {
 }
 input[type="search"]:focus,
 .searchWrapper .search:not([value=""]) {
-    width: 130px;
+    width: 300px;
     background-color: #fff;
     border-color: #66cc75;
 
@@ -217,7 +229,7 @@ input::-webkit-input-placeholder {
 }
 .searchWrapper .search:focus,
 .searchWrapper .search:not([value=""]) {
-    width: 130px;
+    width: 300px;
     padding-left: 32px;
     color: #000;
     background-color: #fff;
